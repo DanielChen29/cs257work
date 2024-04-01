@@ -1,6 +1,6 @@
 Pizza
 Sushi
-Teryaki
+Teriyaki
 Chinese
 Mexican
 Carbonara
