@@ -2,3 +2,5 @@ Pizza
 Sushi
 Teryaki
 Chinese
+Mexican
+Carbonara
