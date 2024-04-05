@@ -4,9 +4,16 @@ CREATE TABLE earthquakes (
   quaketime time with time zone,
   latitude real,
   longitude real,
-  quakedepth real,
+  depth real,
   mag real,
+  magType text,
   id text,
+  nst int,
+  gap int,
+  dmin real,
+  rms real,
+  net text,
+  id text,
+  updated time with time zone,
   place text,
-  quaketype text
 );
