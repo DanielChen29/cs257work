@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS earthquakes;
 CREATE TABLE earthquakes (
-  quaketime timestamp,
+  quaketime time,
   latitude real,
   longitude real,
   mag real,
