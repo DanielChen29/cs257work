@@ -1,0 +1,1 @@
+-- Find the 10 highest magnitude earthquakes
