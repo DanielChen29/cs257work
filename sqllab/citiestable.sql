@@ -10,5 +10,5 @@ CREATE TABLE cities (
 CREATE TABLE States (
   Code text,
   State text,
-  Population real,
+  Population real
 );
