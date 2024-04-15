@@ -4,6 +4,12 @@ def create_tables():
     """ Create tables in the PostgreSQL database"""
     commands = (
         """
+        DROP TABLE IF EXISTS cities
+        """,
+        """
+        DROP TABLE IF EXISTS states
+        """,
+        """
         CREATE TABLE cities (
             City text,
             State text,
