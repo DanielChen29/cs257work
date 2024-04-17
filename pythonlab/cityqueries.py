@@ -92,8 +92,34 @@ def furthest_cardinal():
 
     conn.commit()
 
+def user_search():
+    state = input("Enter state:")
+
+    conn = psycopg2.connect(
+        host="localhost",
+        port=5432,   
+        database="chend2",
+        user="chend2",
+        password="plad242books")
+
+    cur = conn.cursor()
+
+    if len(state) == 2:
+        sql = f"SELECT Population FROM States WHERE Code = {state}"
+    else:
+        sql = f"SELECT Population FROM States WHERE State = {state}"
+
+    cur.execute( sql )
+
+    row = cur.fetchone()
+
+    print(f"{row[0]} is the population of {state}")
+
+    conn.commit()
+
 if __name__ == '__main__':
     northfield()
     max_pop()
     smallest_in_MN()
     furthest_cardinal()
+    user_search()
