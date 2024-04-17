@@ -33,7 +33,7 @@ def max_pop():
 
     cur = conn.cursor()
 
-    sql = "SELECT City FROM Cities ORDER BY Population LIMIT 1"
+    sql = "SELECT City FROM Cities ORDER BY Population DESC LIMIT 1"
     
     cur.execute( sql )
 
