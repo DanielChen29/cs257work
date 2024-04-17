@@ -83,9 +83,9 @@ def furthest_cardinal():
 
     for sql in commands:
         cur.execute( sql )
-        row.append(cur.fetchone())
+        row.append(cur.fetchone()[0])
 
-    print(f"{row[0][0]} is the farthest city West in the US")
+    print(f"{row[0]} is the farthest city West in the US")
     print(f"{row[1]} is the farthest city East in the US")
     print(f"{row[2]} is the farthest city South in the US")
     print(f"{row[3]} is the farthest city North in the US")
