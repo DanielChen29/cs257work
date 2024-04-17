@@ -1,3 +1,4 @@
+from cgitb import small
 import psycopg2
 
 def northfield():
@@ -43,6 +44,27 @@ def max_pop():
 
     conn.commit()
 
+def smallest_in_MN():
+    conn = psycopg2.connect(
+        host="localhost",
+        port=5432,   
+        database="chend2",
+        user="chend2",
+        password="plad242books")
+
+    cur = conn.cursor()
+
+    sql = "SELECT City FROM Cities WHERE State = Minnesota ORDER BY Population LIMIT 1"
+    
+    cur.execute( sql )
+
+    row = cur.fetchone()
+
+    print(f"{row[0]} has the smallest population in MN")
+
+    conn.commit()
+
 if __name__ == '__main__':
     northfield()
     max_pop()
+    smallest_in_MN()
