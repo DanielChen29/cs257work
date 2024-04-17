@@ -74,8 +74,8 @@ def furthest_cardinal():
 
     cur = conn.cursor()
 
-    commands = ["SELECT City FROM Cities ORDER BY Lattitude LIMIT 1",
-                "SELECT City FROM Cities ORDER BY Lattitude DESC LIMIT 1",
+    commands = ["SELECT City FROM Cities ORDER BY Latitude LIMIT 1",
+                "SELECT City FROM Cities ORDER BY Latitude DESC LIMIT 1",
                 "SELECT City FROM Cities ORDER BY Longitude LIMIT 1",
                 "SELECT City FROM Cities ORDER BY Longitude DESC LIMIT 1"]
     
