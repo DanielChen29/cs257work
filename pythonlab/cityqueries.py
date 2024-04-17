@@ -23,7 +23,7 @@ def northfield():
 
     conn.commit()
 
-def northfield():
+def max_pop():
     conn = psycopg2.connect(
         host="localhost",
         port=5432,   
@@ -45,3 +45,4 @@ def northfield():
 
 if __name__ == '__main__':
     northfield()
+    max_pop()
