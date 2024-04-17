@@ -64,7 +64,36 @@ def smallest_in_MN():
 
     conn.commit()
 
+def furthest_cardinal():
+    conn = psycopg2.connect(
+        host="localhost",
+        port=5432,   
+        database="chend2",
+        user="chend2",
+        password="plad242books")
+
+    cur = conn.cursor()
+
+    commands = ["SELECT City FROM Cities ORDER BY Lattitude LIMIT 1",
+                "SELECT City FROM Cities ORDER BY Lattitude DESC LIMIT 1",
+                "SELECT City FROM Cities ORDER BY Longitude LIMIT 1",
+                "SELECT City FROM Cities ORDER BY Longitude DESC LIMIT 1"]
+    
+    row = []
+
+    for sql in commands:
+        cur.execute( sql )
+        row.append(cur.fetchone())
+
+    print(f"{row[0]} is the farthest city West in the US")
+    print(f"{row[1]} is the farthest city East in the US")
+    print(f"{row[2]} is the farthest city South in the US")
+    print(f"{row[3]} is the farthest city North in the US")
+
+    conn.commit()
+
 if __name__ == '__main__':
     northfield()
     max_pop()
     smallest_in_MN()
+    furthest_cardinal()
