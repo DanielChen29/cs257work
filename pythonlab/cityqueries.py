@@ -22,8 +22,6 @@ def northfield():
     else:
         print("Error: Northfield not found in the database.")
 
-    conn.commit()
-
 def max_pop():
     conn = psycopg2.connect(
         host="localhost",
@@ -42,8 +40,6 @@ def max_pop():
 
     print(f"{row[0]} has the largest population in the US")
 
-    conn.commit()
-
 def smallest_in_MN():
     conn = psycopg2.connect(
         host="localhost",
@@ -61,8 +57,6 @@ def smallest_in_MN():
     row = cur.fetchone()
 
     print(f"{row[0]} has the smallest population in MN")
-
-    conn.commit()
 
 def furthest_cardinal():
     conn = psycopg2.connect(
@@ -90,8 +84,6 @@ def furthest_cardinal():
     print(f"{row[2]} is the farthest city South in the US")
     print(f"{row[3]} is the farthest city North in the US")
 
-    conn.commit()
-
 def user_search():
     state = input("Enter state:")
 
@@ -114,8 +106,6 @@ def user_search():
     row = cur.fetchone()
 
     print(f"{row[0]} is the population of {state}")
-
-    conn.commit()
 
 if __name__ == '__main__':
     northfield()
