@@ -97,9 +97,9 @@ def user_search():
     cur = conn.cursor()
 
     if len(state) == 2:
-        sql = f"SELECT Population FROM States WHERE code = '{state}'"
+        sql = f"SELECT Population FROM States WHERE Code = '{state}'"
     else:
-        sql = f"SELECT Population FROM States WHERE state = '{state}'"
+        sql = f"SELECT Population FROM States WHERE State = 'Washington"
 
     cur.execute( sql )
 
