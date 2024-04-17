@@ -54,7 +54,7 @@ def smallest_in_MN():
 
     cur = conn.cursor()
 
-    sql = "SELECT City FROM Cities WHERE State = Minnesota ORDER BY Population LIMIT 1"
+    sql = "SELECT City FROM Cities WHERE State = 'Minnesota' ORDER BY Population LIMIT 1"
     
     cur.execute( sql )
 
