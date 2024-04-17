@@ -1,9 +1,6 @@
 import psycopg2
 
-def queries():
-
-    # You will need to change the Port and the Password to use this code
-    
+def northfield():
     conn = psycopg2.connect(
         host="localhost",
         port=5432,   
@@ -17,7 +14,6 @@ def queries():
     
     cur.execute( sql )
 
-    # fetchone() returns one row that matches your quer
     row = cur.fetchone()
 
     if row:
@@ -27,5 +23,25 @@ def queries():
 
     conn.commit()
 
+def northfield():
+    conn = psycopg2.connect(
+        host="localhost",
+        port=5432,   
+        database="chend2",
+        user="chend2",
+        password="plad242books")
+
+    cur = conn.cursor()
+
+    sql = "SELECT City FROM Cities ORDER BY Population LIMIT 1"
+    
+    cur.execute( sql )
+
+    row = cur.fetchone()
+
+    print(f"{row[0]} has the largest population in the US")
+
+    conn.commit()
+
 if __name__ == '__main__':
-    queries()
+    northfield()
