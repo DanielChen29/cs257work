@@ -17,7 +17,7 @@ def my_color(word1):
     return '<h1 style="color:Green">' + word1 + '</h1>'
 
 @app.route('/add/<int1>/<int2>')
-def my_display(int1, int2):
+def my_add(int1, int2):
     int1 = int(int1)
     int2 = int(int2)
     the_string = int1 + " + " + int2 + " = " + (int1 + int2);
