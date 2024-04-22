@@ -18,6 +18,8 @@ def my_color(word1):
 
 @app.route('/add/<int1>/<int2>')
 def my_display(int1, int2):
+    int1 = int(int1)
+    int2 = int(int2)
     the_string = int1 + " + " + int2 + " = " + (int1 + int2);
     return the_string
 
