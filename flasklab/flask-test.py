@@ -22,7 +22,7 @@ def my_add(int1, int2):
     the_string = int1 + " + " + int2 + " = " + str((int(int1) + int(int2)));
     return the_string
 
-@app.route('/pop/abbrev')
+@app.route('/pop/<abbrev>')
 def my_pop(abbrev):
     state = abbrev
 
