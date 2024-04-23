@@ -97,15 +97,25 @@ def user_search():
     cur = conn.cursor()
 
     if len(state) == 2:
-        sql = f"SELECT Population FROM States WHERE Code = '{state}'"
-    else:
-        sql = f"SELECT Population FROM States WHERE Name = '{state}'"
+        sql = f"SELECT State FROM States WHERE Code = '{state}'"
 
     cur.execute( sql )
 
     row = cur.fetchone()
 
-    print(f"{row[0]} is the population of {state}")
+    state = row[0]
+
+    sql = f"SELECT Population FROM Cities WHERE State = '{state}'"
+
+    cur.execute( sql )
+
+    rows = cur.fetchall()
+
+    pop = 0
+    for r in rows:
+        pop += r[0]
+
+    print(f"the largest cities in {state} have a combined population of {pop}")
 
 if __name__ == '__main__':
     northfield()
