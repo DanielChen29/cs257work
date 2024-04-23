@@ -105,7 +105,7 @@ def user_search():
 
         state = row[0]
 
-    sql = f"SELECT Population FROM Cities WHERE State = '{state}'"
+    sql = f"SELECT Population FROM Cities WHERE Name = '{state}'"
 
     cur.execute( sql )
 
