@@ -99,11 +99,9 @@ def user_search():
     if len(state) == 2:
         sql = f"SELECT State FROM States WHERE Code = '{state}'"
 
-    cur.execute( sql )
+        row = cur.fetchone()
 
-    row = cur.fetchone()
-
-    state = row[0]
+        state = row[0]
 
     sql = f"SELECT Population FROM Cities WHERE State = '{state}'"
 
