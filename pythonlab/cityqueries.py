@@ -1,6 +1,7 @@
 from cgitb import small
 import psycopg2
 
+# Check if Northfield is in the database, if so print its coordinates
 def northfield():
     conn = psycopg2.connect(
         host="localhost",
@@ -22,6 +23,7 @@ def northfield():
     else:
         print("Error: Northfield not found in the database.")
 
+# Find the city with the largest population in the US
 def max_pop():
     conn = psycopg2.connect(
         host="localhost",
@@ -40,6 +42,7 @@ def max_pop():
 
     print(f"{row[0]} has the largest population in the US")
 
+# Find the smallest city in MN
 def smallest_in_MN():
     conn = psycopg2.connect(
         host="localhost",
@@ -58,6 +61,7 @@ def smallest_in_MN():
 
     print(f"{row[0]} has the smallest population in MN")
 
+# Find the furthest city in each cardinal direction
 def furthest_cardinal():
     conn = psycopg2.connect(
         host="localhost",
@@ -84,6 +88,7 @@ def furthest_cardinal():
     print(f"{row[2]} is the farthest city South in the US")
     print(f"{row[3]} is the farthest city North in the US")
 
+# Find the population of all large cities combined in a state input by the user
 def user_search():
     state = input("Enter state:")
 
