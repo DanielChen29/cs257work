@@ -19,7 +19,7 @@ def create_tables():
         )
         """,
         """ 
-        CREATE TABLE States (
+        CREATE TABLE states (
                 Code text,
                 State text,
                 Population real
@@ -37,6 +37,8 @@ def create_tables():
 
     for command in commands:
         cur.execute(command)
+
+    conn.commit()
 
 if __name__ == '__main__':
     create_tables()
