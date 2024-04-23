@@ -97,7 +97,7 @@ def user_search():
     cur = conn.cursor()
 
     if len(state) == 2:
-        sql = f"SELECT State FROM States WHERE Code = '{state}'"
+        sql = f"SELECT Name FROM States WHERE Code = '{state}'"
 
         cur.execute( sql )
 
@@ -105,7 +105,7 @@ def user_search():
 
         state = row[0]
 
-    sql = f"SELECT Population FROM Cities WHERE Name = '{state}'"
+    sql = f"SELECT Population FROM Cities WHERE State = '{state}'"
 
     cur.execute( sql )
 
