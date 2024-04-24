@@ -19,7 +19,7 @@ def rand():
 
     cur = conn.cursor()
 
-    sql = f"SELECT * FROM Cities ORDER BY RAND() LIMIT 1"
+    sql = f"SELECT * FROM Cities ORDER BY RANDOM() LIMIT 1"
     
     cur.execute( sql )
 
