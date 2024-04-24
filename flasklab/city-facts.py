@@ -35,7 +35,7 @@ def rand():
 
     row = cur.fetchone()
 
-    prop = pop/row[0]
+    prop = round(pop/row[0] * 10, 2)
     
     return render_template("cityfact.html", city = city, state = state, pop = pop, prop = prop)
 
