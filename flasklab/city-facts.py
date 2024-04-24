@@ -29,7 +29,6 @@ def rand():
     state = row[1]
     pop = row[2]
     
-    num = random.randint()
     return render_template("cityfact.html", city = city, state = state, pop = pop)
 
 if __name__ == '__main__':
