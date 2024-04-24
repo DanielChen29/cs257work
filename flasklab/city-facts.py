@@ -28,8 +28,16 @@ def rand():
     city = row[0]
     state = row[1]
     pop = row[2]
+
+    sql = f"SELECT Population FROM States WHERE state = '{state}'"
     
-    return render_template("cityfact.html", city = city, state = state, pop = pop)
+    cur.execute( sql )
+
+    row = cur.fetchone()
+
+    prop = pop/row[0]
+    
+    return render_template("cityfact.html", city = city, state = state, pop = pop, prop = prop)
 
 if __name__ == '__main__':
     my_port = 5202
