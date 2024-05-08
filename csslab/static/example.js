@@ -1,11 +1,11 @@
 function changeColor() {
   the_heading = document.getElementById("hello");
-  const colors = [red, orange, yellow, green, blue, indigo, violet];
+  const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
   let i = colors.indexOf(the_heading.style.color)
   if (i < colors.length - 1) {
     the_heading.style.color = colors[i + 1];
   } else {
     the_heading.style.color = colors[0]
   }
-  console.log("I just changed the color to: " + the_heading.style.color + colors.indexOf(the_heading.style.color))  
+  console.log("I just changed the color to: " + the_heading.style.color)  
 }
