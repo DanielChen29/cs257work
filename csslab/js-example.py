@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def welcome():
-    message = f"Welcome to My Webpage. Your lucky number is:" 
+    message = f"Welcome to my webpage. Your lucky number is:" 
     number = random.randint(0, 100)
     return render_template("homepage.html", someText = message, someNum = number)
 
