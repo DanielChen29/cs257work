@@ -7,5 +7,5 @@ function changeColor() {
   } else {
     the_heading.style.color = colors[0]
   }
-  console.log("I just changed the color to: " + the_heading.style.color)  
+  console.log("I just changed the color to: " + the_heading.style.color + colors.indexOf(the_heading.style.color))  
 }
