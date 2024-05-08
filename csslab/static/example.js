@@ -9,3 +9,9 @@ function changeColor() {
   }
   console.log("I just changed the color to: " + the_heading.style.color)  
 }
+
+function changeNumber() {
+  the_number = document.getElementById("big-num");
+  the_number.innerText = Math.floor(Math.random() * 101);
+  console.log("I just changed the lucky number to: " + the_number.innerText)  
+}

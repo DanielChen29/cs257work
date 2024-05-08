@@ -1,12 +1,20 @@
 .my-class{
   text-align: center;
   color: blue;
+  cursor: pointer;
 }
 
 .center-para{
   text-align: center;
   margin-top: 20px;
-  font: arial;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.big-num{
+  text-align: center;
+  margin-top: 20px;
+  font-size: xx-large;
+  font-weight: bold;
 }
 
 .big-button{

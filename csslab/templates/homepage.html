@@ -4,7 +4,7 @@
   <script src="/static/example.js"></script>
 </head>
 
-<h1 class="my-class" id="hello">
+<h1 class="my-class" id="hello" onclick="changeColor()">
   Hello World!
 </h1>
 
@@ -12,8 +12,12 @@
   {{someText}}
 </p>
 
+<p class="big-num" id="big-num">
+  {{someNum}}
+</p>
+
 <p class="center-para">
-<button class="big-button" onclick="changeColor()">
-   Change Color
+<button class="big-button" onclick="changeNumber()">
+   New Number
 </button>
 </p>

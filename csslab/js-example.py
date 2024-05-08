@@ -1,13 +1,14 @@
 from flask import Flask
 from flask import render_template
+import random
 
 app = Flask(__name__)
 
 @app.route('/')
 def welcome():
-    message = "Welcome to My Example Webpage."
-    message = message + " This text was produced by concatenating strings in Python!"
-    return render_template("homepage.html", someText = message)
+    message = f"Welcome to My Webpage. Your lucky number is:" 
+    number = random.randint(0, 100)
+    return render_template("homepage.html", someText = message, someNum = number)
 
 if __name__ == '__main__':
     my_port = 5202
